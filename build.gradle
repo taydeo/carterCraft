@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'checkstyle'
     id 'com.github.johnrengelman.shadow' version '6.0.0'
 }
 
@@ -13,11 +12,16 @@ repositories {
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
 
+    allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+	}
 }
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
-    compile 'com.google.inject:guice:4.0'
+    compileOnly 'com.github.CitizensDev:Citizens2:fa0cf4fc95'
 }
 
 shadowJar {

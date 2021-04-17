@@ -1,0 +1,8 @@
+name: cartercraft
+version: 1.0.0
+author: taydeo
+description: A plugin for famous and beloved president, Jimmy Carter.
+main: com.catsinred.cartercraft
+api-version: 1.16
+depend: [Citizens]
+prefix: CarterCraft - 
