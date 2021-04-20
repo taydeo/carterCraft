@@ -8,20 +8,14 @@ version '1.0.0'
 
 repositories {
     mavenCentral()
-
+    maven { url 'https://repo.citizensnpcs.co' }
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
-
-    allprojects {
-		repositories {
-			maven { url 'https://jitpack.io' }
-		}
-	}
 }
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
-    compileOnly 'com.github.CitizensDev:Citizens2:-SNAPSHOT'
+    implementation 'net.citizensnpcs:citizensapi:2.0.27-SNAPSHOT'
 }
 
 shadowJar {
