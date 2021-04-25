@@ -5,6 +5,8 @@ A plugin that uses Citizens2 to bring famous peanut president Jimmy Carter into 
 
 funny
 
+also learn how to use citizens api
+
 ## How do I use it?
 
 use the latest spigot version and be sure to have a copy of Citizens loaded, if not then the plugin wont work.

@@ -3,7 +3,11 @@ package com.catsinred.cartercraft.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+
+import net.citizensnpcs.api.CitizensAPI;
+import net.citizensnpcs.api.npc.NPC;
 
 public class SpawnCarter implements CommandExecutor {
 
@@ -13,7 +17,9 @@ public class SpawnCarter implements CommandExecutor {
             Player player = (Player) sender;
 
             if (args[0] == "spawn") {
-                player.sendMessage("Waiting to be implemented.");
+                NPC npc = CitizensAPI.getNPCRegistry().createNPC(EntityType.PLAYER, "Jimmy Carter");
+
+                npc.spawn(player.getLocation());
             } else {
                 player.sendMessage("No input recieved.");
             }
